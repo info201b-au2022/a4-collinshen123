@@ -1,45 +1,65 @@
 ---
-title: "Your A4 Report Title (TODO: Revise title)"
-author: "Your Name"
+title: "Prison"
+author: "Collin Shen"
 date: '2022-11-01'
 output: html_document
 ---
 
 ```{r echo=FALSE, eval=TRUE, message=FALSE}
-source("../source/a4-helpers.R")
+# source("../source/a4-helpers.R")
 source("../source/analysis.R")
 ```
 
 ## Abstract 
-[TODO: Include a short abstract (about 50 words)]
+[The Incarceration trends in the US since 1970 reveal inequality disparities in the American justice system. Although many policies related to crime and incarceration have been changed throughout the decades and many areas in the US have had lots of changes, incarceration in the US still remains incredibly high. My report will examine historical incarceration trends and potential inequalities. This report can help to bring potential inequalities to light.]
 
-# Test (TODO: Remove before submission!!)
-```{r echo=FALSE}
-q1_string <- test_query1()
-num <- 5
-```
-As you know, this is a markdown report. The [R Markdown Cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf) is **useful!**
 
-* Here's a test of a dynamic variable. Say **"`r q1_string`!!!** 
-* Here's another test. A vector
-of numbers: `r test_query2(num)`.
-
-Recall that _{r echo=TRUE}_ can be used to display the code, 
-which is very useful when developing and debugging a report. Here's an example: 
-
-```{r echo=TRUE}
-num <- 5
-sum <- sum(test_query2(num))
-print(sum)
-```
 
 ## Introduction 
-[TODO]
+
+
+Jailing and imprisonment in the United States contains lots of systemic injustices and inequalities. During the 1970s and 1980s, the national commitment to "tough on crime" fought fire with fire. Convicts were heavily prosecuted and sentenced to longer terms under pressure to crack down on criminals. Lower-level felony incarceration increased, and over-policing overwhelmed courts across America. Bill Clinton continued the tradition established by former presidents by passing the largest crime bill in American history. He increased funding for prisons and police, and he prevented incarcerated people from receiving Pell Grants. What effect did these policy changes have on the incarceration rates in the US? This report seeks to shed light on the consequences of America's past in order to better inform our future. By the early 2000s, it was clear that mass incarceration was wreaking havoc on entire communities. Black people continue to be incarcerated at a rate that is more than twice that of white people. Black neighborhoods are still over-policed, and black people are still overcharged in courts across the country. However, the consequences of mass incarceration reach far beyond America's prison walls, as well as our police and courts. Mass incarceration has wreaked havoc on families, communities, and futures.After all, how we treat our incarcerated population reflects not only individual rights but, more fundamentally, America's priorities. To understand how to proceed, we must first understand how America's priorities have historically defined Jailing.
+
+ 
 
 ## Data Summary 
-[TODO]
+In `r year_max_jail_pop`, `r county_max_jail_pop`'s the total jailing population was the highest in all of America between 1970 and 2018. 
+
+In `r year_max_male_juvenile_pop`, `r county_max_male_juvenile_pop`'s the total jailing population was the highest in all of America between 1970 and 2018. 
 
 [TODO ... other sections ... See Canvas for details]
+
+
+
+## Section 3
+
+```{r prison, echo=FALSE, fig.height=4, fig.width=10, message=FALSE, warning=FALSE}
+plot_jail_pop_for_us()
+```
+
+How has the prison population in America grown in the aftermath of the "tough on crime" era? Since the mid-1970s, there has been a significant increase in the prison population, as shown in this graph. There has been a clear increase since the beginning of the "tough on crime" era. Between 1990 and 2010, incarceration rates increased dramatically.
+
+
+## Section 4: Growth of Prison Population by State
+```{r state, echo=FALSE, fig.height=5, fig.width=10, message=FALSE, warning=FALSE}
+plot_jail_pop_by_states(c("WA", "TX", "FL", "NY", "TN", "UT"))
+```
+
+
+## Section 5: Pretrial Jailing Rate Inequality by Urbanicity
+```{r pretrial, echo=FALSE, fig.height=5, fig.width=10, message=FALSE, warning=FALSE}
+inequality_plot()
+```
+
+## Section 6: Pretrial Jail Bookings by State
+```{r map, echo=FALSE, message=FALSE, warning=FALSE}
+plot_county_ineq("WA", "2000")
+```
+#```{r map, echo=FALSE, message=FALSE, warning=FALSE}
+#plot_county_ineq("TX", "2000")
+#```
+
+
 
 _All the very best with your work!_
 
