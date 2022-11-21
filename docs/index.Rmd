@@ -1,17 +1,16 @@
 ---
-title: "Prison"
+title: "Prisoner Injustices: Incarceration Injustices in the US from 1970-2018"
 author: "Collin Shen"
 date: '2022-11-01'
 output: html_document
 ---
 
 ```{r echo=FALSE, eval=TRUE, message=FALSE}
-# source("../source/a4-helpers.R")
 source("../source/analysis.R")
 ```
 
 ## Abstract 
-[The Incarceration trends in the US since 1970 reveal inequality disparities in the American justice system. Although many policies related to crime and incarceration have been changed throughout the decades and many areas in the US have had lots of changes, incarceration in the US still remains incredibly high. My report will examine historical incarceration trends and potential inequalities. This report can help to bring potential inequalities to light.]
+The Incarceration trends in the US since 1970 reveal inequality disparities in the American justice system. Although many policies related to crime and incarceration have been changed throughout the decades and many areas in the US have had lots of changes, incarceration in the US still remains incredibly high. My report will examine historical incarceration trends and potential inequalities. This report can help to bring potential inequalities to light.
 
 
 
@@ -23,11 +22,13 @@ Jailing and imprisonment in the United States contains lots of systemic injustic
  
 
 ## Data Summary 
-In `r year_max_jail_pop`, `r county_max_jail_pop`'s the total jailing population was the highest in all of America between 1970 and 2018. 
+Between the years of 1970 and 2018, `r year_max_jail_pop` had the highest total jailing population in all of America which was in   `r county_max_jail_pop`. 
 
-In `r year_max_male_juvenile_pop`, `r county_max_male_juvenile_pop`'s the total jailing population was the highest in all of America between 1970 and 2018. 
+Between the years of 1970 and 2018, `r year_max_male_juvenile_pop` had the highest total jailing population for male juveniles in all of America which was in   `r county_max_male_juvenile_pop`. 
 
-[TODO ... other sections ... See Canvas for details]
+
+
+
 
 
 
@@ -54,12 +55,12 @@ inequality_plot()
 ## Section 6: Pretrial Jail Bookings by State
 ```{r map, echo=FALSE, message=FALSE, warning=FALSE}
 plot_county_ineq("WA", "2000")
+
+
+plot_county_ineq("TX", "2000")
 ```
-#```{r map, echo=FALSE, message=FALSE, warning=FALSE}
-#plot_county_ineq("TX", "2000")
-#```
+
+We can see that in the year 2000, Washington and Texas had very different incarceration rates for male juveniles in terms of the region that they were being imprisoned at. From the 2 maps we can see that in Washington, male juveniles were  being imprisoned in counties that were urban, suburban, and rural. However, in Texas we can see that the majority of male juveniles being imprisoned were densly packed in urban counties, the most notable of which Houstan is in.
 
 
-
-_All the very best with your work!_
 

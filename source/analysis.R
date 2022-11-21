@@ -10,27 +10,7 @@ source("../source/a4-helpers.R")
 
 incarceration <- read.csv("https://raw.githubusercontent.com/vera-institute/incarceration-trends/master/incarceration_trends.csv", stringsAsFactors = FALSE)
 
-## Test queries ----
-#----------------------------------------------------------------------------#
-# Simple queries for basic testing
-#----------------------------------------------------------------------------#
-# Return a simple string
-test_query1 <- function() {
-  return ("Hello world")
-}
 
-in_2018 <- incarceration%>%
-  select(year, state, female_pop_15to64, male_pop_15to64)
-  filter(str_detect(year, "2018"))%>%
-  group_by(state)%>%
-  summarise(female_pop_15to64 = sum(female_pop_15to64), male_pop_15to64 = sum(male_pop_15to64) )
- 
-
-# Return a vector of numbers
-test_query2 <- function(num=6) {
-  v <- seq(1:num)
-  return(v)
-}
 
 ## Section 2  ---- 
 #----------------------------------------------------------------------------#
