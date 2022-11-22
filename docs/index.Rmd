@@ -47,14 +47,14 @@ plot_jail_pop_by_states(c("WA", "TX", "FL", "NY", "TN", "UT"))
 ```
 The six states chosen represent different regions of the US. Some of the state's prison population growth patterns were distinct. 4 of the states which were, Washington, Utah, Texas, and Tennessee had very similar trends. This implies that the "tough on crime" era was implemented differently at the state level. New York had a steadily high level of jail population and Florida had a drastic increase after around 1983. This raises the question: which policies had a large impact on the state's prison population growth over the years? 
 
-hello
+
 ## Section 5: Male Juvenile Jailing rates by region in the US
 ```{r pretrial, echo=FALSE, fig.height=5, fig.width=10, message=FALSE, warning=FALSE}
 inequality_plot()
 ```
 The four regions chosen represent the different regions of the US defined by the Vera project. We can see that all 4 regions hold a similar general shape with a spike of male juvenile jailing rates around the year 1995. We can also see that the Northeast region has a huge spike that is different from the rest. This brings up the question: What happened to counties specefically in the northeast to cause such a big spike in incarceration of Male Juveniles?
 
-hello
+
 
 ## Section 6: Male Juvenile Jailing rates by State
 ```{r map, echo=FALSE, message=FALSE, warning=FALSE}
