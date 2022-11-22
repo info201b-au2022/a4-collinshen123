@@ -45,14 +45,18 @@ How has the prison population in America grown in the aftermath of the "tough on
 ```{r state, echo=FALSE, fig.height=5, fig.width=10, message=FALSE, warning=FALSE}
 plot_jail_pop_by_states(c("WA", "TX", "FL", "NY", "TN", "UT"))
 ```
+The six states chosen represent different regions of the US. Some of the state's prison population growth patterns were distinct. 4 of the states which were, Washington, Utah, Texas, and Tennessee had very similar trends. This implies that the "tough on crime" era was implemented differently at the state level. New York had a steadily high level of jail population and Florida had a drastic increase after around 1983. This raises the question: which policies had a large impact on the state's prison population growth over the years? 
 
 
-## Section 5: Pretrial Jailing Rate Inequality by Urbanicity
+## Section 5: Male Juvenile Jailing rates by region in the US
 ```{r pretrial, echo=FALSE, fig.height=5, fig.width=10, message=FALSE, warning=FALSE}
 inequality_plot()
 ```
+The four regions chosen represent the different regions of the US defined by the Vera project. We can see that all 4 regions hold a similar general shape with a spike of male juvenile jailing rates around the year 1995. We can also see that the Northeast region has a huge spike that is different from the rest. This brings up the question: What happened to counties specefically in the northeast to cause such a big spike in incarceration of Male Juveniles?
 
-## Section 6: Pretrial Jail Bookings by State
+
+
+## Section 6: Male Juvenile Jailing rates by State
 ```{r map, echo=FALSE, message=FALSE, warning=FALSE}
 plot_county_ineq("WA", "2000")
 
@@ -60,7 +64,7 @@ plot_county_ineq("WA", "2000")
 plot_county_ineq("TX", "2000")
 ```
 
-We can see that in the year 2000, Washington and Texas had very different incarceration rates for male juveniles in terms of the region that they were being imprisoned at. From the 2 maps we can see that in Washington, male juveniles were  being imprisoned in counties that were urban, suburban, and rural. However, in Texas we can see that the majority of male juveniles being imprisoned were densly packed in urban counties, the most notable of which Houstan is in.
+We can see that in the year 2000, Washington and Texas had very different incarceration rates for male juveniles in terms of the region that they were being imprisoned at. From the 2 maps we can see that in Washington, male juveniles were being imprisoned in counties that were urban, suburban, and rural. Washington had many counties that were evenly disributed at about 10-15 male juveniles. However, in Texas we can see that the majority of male juveniles being imprisoned were densely packed in urban counties, the most notable of which Houston is in. These few counties contained approximitaly 20-25 male juveniles. With juvenile incarceration, there are lots of issues that arise with neglect of children, kids growing up in tense environments and, more problems that juvenile detention causes. In our case we can see that juvenile detention and possible issues that minors face is more widespread in the state of washington. The issue is more concentrated in Texas where it would be easier to crack down on the issues.
 
 
 

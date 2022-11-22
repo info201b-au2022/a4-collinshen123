@@ -46,13 +46,13 @@ get_year_jail_pop <- function() {
   return(total_pop_df)
 }
 
-# This function renders Jail Population Increase bar chart to match figure 1
+# This function creates a ggplot for the Jail Population Increase using a bar chart to match the provided figure 1
 plot_jail_pop_for_us <- function() {
-  total_pop_df <- get_year_jail_pop() # calls relevant data frame
+  total_pop_df <- get_year_jail_pop() 
   
   jail_pop_plot <- ggplot(data = total_pop_df) +
     geom_col(mapping = aes(x = year, y = total_jail_pop)) +
-    labs(title = "Increase of Jail Population in U.S. (1970-2018)") +
+    labs(title = "Increase of Jail Population in U.S. (1970-2018)", caption = "The chart shows the increase of US jail population over the years.") +
     xlab(label = "Year") + 
     scale_y_continuous(name = "Total Jail Population", labels = c("0", "200,000", "400,000", "600,000", "800,000"))
   return(jail_pop_plot)
@@ -68,7 +68,7 @@ plot_jail_pop_for_us <- function() {
 
 # This function takes the state codes and returns the state's full name
 get_full_state_name <- function(states) {
-  state_abv <- read.csv(file = "/Users/frank/Documents/Collin/code/info201/assignments/a4-collinshen123/source/state_names_and_codes.csv",stringsAsFactors = FALSE)
+  state_abv <- read.csv(file = "../source/state_names_and_codes.csv",stringsAsFactors = FALSE)
   state_names <- state_abv %>%
     filter(Code %in% states, na.rm = TRUE) %>% # filters abv df for state input
     pull(State) # returns vector of full state names
@@ -112,7 +112,7 @@ inequality_plot <- function() {
   inequality_df <- inequality_df() 
   ineq_plot <- ggplot(data = inequality_df) +
     geom_smooth(mapping = aes(x = year, y = male_juvenile_jail_pop, color = region), se = FALSE) + 
-    labs(title = "Male Juvenile Jailing rates by region of US (1970-2018)", 
+    labs(title = "from 1970 to 2018", 
          x = "Year", y = "Male Jevnile Jailing Rate", color = "Region", 
          caption = "The regions are geographical regions of the United States.")  
   return(ineq_plot)
@@ -133,7 +133,7 @@ county_ineq_df <- function(states, years) {
     mutate(subregion = tolower(str_replace(county_name, " County", ""))) %>%
     select(male_juvenile_jail_pop, subregion)
   
-  state_abv <- read.csv(file = "/Users/frank/Documents/Collin/code/info201/assignments/a4-collinshen123/source/state_names_and_codes.csv", stringsAsFactors = FALSE)
+  state_abv <- read.csv(file = "../source/state_names_and_codes.csv", stringsAsFactors = FALSE)
   
   state_name <- state_abv %>%
     filter(Code == states) %>% # filter df for state input
